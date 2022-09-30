@@ -1,4 +1,5 @@
-import javax.swing.*;
+package Lab1_6;
+
 import java.util.Scanner;
 
 public class Main {

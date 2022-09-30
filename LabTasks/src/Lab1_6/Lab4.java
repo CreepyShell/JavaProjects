@@ -1,3 +1,5 @@
+package Lab1_6;
+
 import java.lang.Character;
 import javax.swing.*;
 public class Lab4 {

@@ -1,3 +1,5 @@
+package Lab1_6;
+
 import javax.swing.*;
 
 public class Lab6 {
