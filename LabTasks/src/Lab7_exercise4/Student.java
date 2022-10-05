@@ -5,14 +5,14 @@ public class Student {
     private String name;
     private String department;
 
-    public Student(int id, String name, String department){
+    public Student(int id, String name, String department) {
         this.setId(id);
         this.setName(name);
         this.setDepartment(department);
     }
 
-    public String toString(){
-        return this.name + " studies in "+ this.department;
+    public String toString() {
+        return this.name + " studies in " + this.department;
     }
 
     public void setId(int id) {
@@ -23,7 +23,7 @@ public class Student {
         this.name = name;
     }
 
-    public void setDepartment(String department){
+    public void setDepartment(String department) {
         this.department = department;
     }
 
