@@ -42,6 +42,7 @@ public abstract class Lecturer implements Person {
         setStaffId(staffId);
         setCoursesTaught(coursesTaught);
         setCoursesTaught(coursesTaught);
+        setDateOfAppointment(dateOfAppointment);
     }
 
     public void setAddress(String address) {

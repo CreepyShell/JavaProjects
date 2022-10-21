@@ -1,11 +1,20 @@
 package Lab10;
 
+import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
 public class PermanentLecturer extends Lecturer {
     private String pensionEntitlements;
     private String status;
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "pensionEntitlements='" + getPensionEntitlements() + '\'' +
+                ", status='" + getStatus();
+    }
 
     public String getPensionEntitlements() {
         return pensionEntitlements;
@@ -33,10 +42,10 @@ public class PermanentLecturer extends Lecturer {
 
     @Override
     public int getPointOnScale() {
-        long years = new Date(System.currentTimeMillis()).getTime() - this.getDateOfAppointment().getTime().getTime();
-        if (years / 1000 / 3600 / 24 / 365 > 20) {
+        int yearOfAppointment = getDateOfAppointment().get(Calendar.YEAR);
+        int thisYear = (new Date(System.currentTimeMillis())).toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getYear();
+        if (yearOfAppointment - thisYear > 20)
             return 20;
-        }
-        return Math.round(years / 1000 / 3600 / 24 / 365);
+        return yearOfAppointment - thisYear;
     }
 }
